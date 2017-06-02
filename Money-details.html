@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Money for details</title>
+	<link rel="stylesheet" href="css/base.css">
+	<style>
+		/*p标签的font-size*/
+		*{
+			max-height: 999999px;
+		}
+		.head{
+			width: 6.4rem;
+			height: 0.61rem;
+			position: relative;
+			border-bottom: 0.01rem solid #dedede;
+		}
+		.head img:nth-child(1){
+			position: absolute;
+			top: 0.17rem;
+			left: 0.2rem;
+		}
+		.head img:nth-child(3){
+			position: absolute;
+			top: 0.14rem;
+			right: 0.28rem;
+		}
+		.head p{
+			text-align: center;
+			line-height: 0.61rem;
+			font-size: 0.24rem;
+			color:#333;
+		}
+		.item-box{
+			padding: 0.25rem 0.2rem 0.35rem 0.2rem;
+		}
+		.item-box>p:first-child{
+			font-size: 0.24rem;
+			color:#0f91dd;
+		}
+		.item-box>p:nth-child(2){
+			margin-top: 0.2rem;
+			font-size: 0.14rem;
+		}
+		.item-box>p:nth-child(2)~p{
+			margin-top: 0.1rem;
+			font-size: 0.16rem;
+			color:#666;
+		}
+		.item-box>p:nth-child(2)~p span{
+			color:#000;
+		}
+		.shoucang{
+			border-top:0.01rem solid #dedede; 
+			padding-top: 0.08rem;
+			padding-bottom: 0.08rem;
+			border-bottom: 0.14rem solid #f5f5f5;
+		}
+		.shoucang li{
+			width: 33.2%;
+			text-align: center;
+			height: 0.32rem;
+			line-height: 0.32rem;
+			font-size: 0.16rem;
+		}
+		.shoucang li:first-child,ul li:nth-child(2){
+			border-right:0.01rem solid #dedede;
+		}
+		.shoucang li img{
+			vertical-align: middle;
+			margin-right: 0.05rem;
+		}
+		#mylist{
+			border-top: 0.01rem solid #ededed;
+			border-bottom: 0.01rem solid #ededed;
+		}
+		#mylist li{
+			width: 33.33%;
+			height: 0.51rem;
+			font-size: 0.16rem;
+			text-align: center;
+			line-height: 0.51rem;
+		}
+		#mylist>.active{
+			color:#0f91dd;
+		}
+		#mylist>#line{
+			width: 33.33%;
+			height: 0.02rem;
+			background: #0f91dd;
+			position: absolute;
+			left: 0;
+			top: 5.82rem;
+			z-index: 100;
+		}
+		.line{
+			width: 100%;
+			height: 0.01rem;
+			background: #dedede;
+		}
+		.prospectus{
+			padding: 0.2rem 0.31rem 0.16rem 0.29rem;
+		}
+		.prospectus>p:first-child{
+			width: 5.72rem;
+		}
+		.prospectus>img{
+			width: 5.8rem;
+			margin-top: 0.16rem;
+			margin-bottom: 0.19rem;
+		}
+		.foot{
+			background: #f5f5f5;
+		}
+		.foot>.guanyu{
+			padding-top: 0.15rem;
+			text-align: center;
+		}
+		.foot>.guanyu>a{
+			color:#333333;
+			font-size: 0.18rem;
+			display: inline-block;
+		}
+		.foot>.guanyu>.active{
+			color:#f11d1c;
+		}
+		.foot>.lianxi{
+			padding-top: 0.14rem;
+			text-align: center;
+		}
+		.foot>.lianxi>a{
+			color:#969696;
+			font-size: 0.14rem;
+		}
+		.foot>.lianxi>a:nth-child(2){
+			display: inline-block;
+			padding-left: 0.08rem;
+			padding-right: 0.08rem;
+			border-left: 0.01rem solid #969696;
+			border-right: 0.01rem solid #969696;
+		}
+		.foot>.copyright{
+			text-align: center;
+			padding-top: 0.1rem;
+			padding-bottom: 0.15rem;
+			font-size: 0.05rem;
+			color:#969696;
+		}
+		.lianxifangshi{
+			padding: 0.12rem 0.27rem 0.1rem 0.24rem;
+			background: #fff;
+		}
+		.yuetan{
+			display: inline-block;
+			width: 2.8rem;
+			height: 0.4rem;
+			border-radius: 0.02rem;
+			background: #fc8026;
+			text-align: center;
+			line-height: 0.4rem;
+			color:#fff;
+			font-size: 0.16rem;
+			margin-left: 0.03rem;
+			margin-right: 0.07rem;
+		}
+		.contact{
+			display: inline-block;
+			width: 2.9rem;
+			height: 0.4rem;
+			border-radius: 0.02rem;
+			background: #108cde;
+			text-align: center;
+			line-height: 0.4rem;
+			color:#fff;
+			font-size: 0.16rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<img src="img/house.png" alt="">
+		<p>资金详情</p>
+		<img src="img/head.png" alt="">
+	</div>
+	<div class="item-box">
+		<p>某机构收购游戏等各类互联网企业</p>
+		<p>2016-11-26 10:47:55　　　　　　浏览数：4人</p>
+		<p>项目类型：<span>其他投资</span> </p>
+		<p>所在地区： <span>北京市朝阳区</span> </p>
+		<p>投资主体：<span>投资公司</span></p>
+		<p>投资行业： <span>IT互联网</span></p>
+		<p>投资地区：<span>全国地区</span></p>
+		<p>投资金额：<span>5000万-100000万</span></p>
+		<p>前期费用：<span>无任何前期费用</span></p>
+		<p>需提供资料：<span>公司证件、相关财务资料、其他资料</span></p>
+	</div>
+	<ul class="clear shoucang">
+		<li class="fl"><img src="img/xingxing.png" alt="">收藏</li>
+		<li class="fl"><img src="img/tanhao.png" alt="">举报</li>
+		<li class="fl"><img src="img/fenxiang.png" alt="">分享</li>
+	</ul>
+	<ul id="mylist" class="clear">
+		<li class="fl active">资金概述</li>
+		<li class="fl" style="border:none;">成功案例</li>
+		<li class="fl">其他备注</li>
+		<div id="line"></div>
+	</ul>
+	<div class="prospectus">
+		<p style="font-size: 0.07rem;">收购游戏等各类互联网企业,收购游戏等各类互联网企业收购游戏等各类互联网企业收购游戏
+等各类互联网企业.</p>
+		<img src="img/zijin.png" alt="">
+	</div>
+	<div class="foot">
+		<div class="guanyu">
+			<a href="" class="active">触屏版</a>
+			<a href="" style="margin-left: 0.23rem;margin-right: 0.16rem;">电脑版</a>
+			<a href="">关于我们</a>
+		</div>
+		<div class="lianxi">
+			<a href="" style="margin-right: 0.08rem">联系我们</a>
+			<a href="">建议与投诉</a>
+			<a href="" style="margin-left: 0.08rem">诚聘英才</a>
+		</div>
+		<div class="copyright">copyright © 2016 北京华夏商盟版权所有 京ICP备16041114号</div>
+	</div>
+	<div class="lianxifangshi">
+		<p>
+			<a href="" class="yuetan">约谈项目方</a>
+			<a href="" class="contact">查看联系方式</a>
+		</p>
+	</div>
+	<!-- dpr像素比 -->
+	<script>
+		// alert(window.devicePixelRatio);
+		(function (doc, win) {
+		        var docEle = doc.documentElement,
+		                resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+		        var recalCulate = function () {
+		            var width = docEle.clientWidth;
+		            docEle.style.fontSize = 100 * (width / 640) + 'px';
+		        };//750一般UI原稿宽度
+		
+		        recalCulate();
+		
+		        if (!doc.addEventListener) return;
+		        win.addEventListener(resizeEvent, recalCulate, false);
+		    })(document, window);
+
+	</script>
+</body>
+</html>

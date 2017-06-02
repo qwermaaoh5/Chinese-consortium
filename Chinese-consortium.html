@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chinese consortium</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+	<style>
+		.head{
+			width: 6rem;
+/*			height: 0.38rem;*/
+			padding: 0.16rem 0.2rem;
+			overflow: hidden;
+		}
+		.head>.fr>img{
+			vertical-align: middle;
+		}
+		.head>.fr>span{
+			margin-left: 0.08rem;
+			color:#ff6600;
+			vertical-align: middle;
+		}
+		.swiper-container {
+    		width: 100%;
+		}
+		.swiper-pagination{
+			bottom: 0.15rem;
+		}
+		.swiper-pagination span{
+			width: 0.15rem;
+			height: 0.15rem;
+		}
+		.search-box{
+			background: #f5f5f5;
+			padding: 0.06rem 0.2rem 0.1rem;
+		}
+		.search{
+			padding: 00.13rem 0;
+			background: #fff;
+			border:0.01rem solid #ededed;
+			border-radius: 0.05rem;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		#search{
+			width: 1.22rem;
+			height: 0.36rem;
+			font-size: 0.18rem;
+			text-align: center;
+			border:none;
+			border-right: 0.02rem solid #ededed;
+		}
+		#searchinp{
+			width: 3.73rem;
+			height: 0.16rem;
+			outline: none;
+			border:none;
+			padding: 0.1rem 0.16rem;
+			font-size: 0.18rem;
+			color:#aaaaaa;
+			border-right:  0.02rem solid #ededed;
+		}
+		#fangdajing{
+			display: inline-block;
+			width: 0.64rem;
+			height: 0.36rem;
+		}
+		#fangdajing img{
+			margin-left: 0.17rem;
+			margin-top: 0.04rem;
+		}
+		.list{
+			position: relative;
+			padding-left:0.2rem; 
+			background: #f5f5f5;
+		}
+		.list>div{
+			width: 2.9rem;
+			height: 2.7rem;
+			margin-right: 0.2rem;
+			margin-bottom: 0.2rem;
+		}
+		.list>div>a>img{
+			margin-top: 0.68rem;
+			margin-left: 1.22rem;
+		}
+		.list>div>a>p{
+			padding-left: 1rem;
+			padding-top: 0.11rem;
+			font-size: 0.3rem;
+			font-family: 微软雅黑;
+			color:#fff;
+		}
+		.list>.capital{
+			background: #049bda;
+		}
+		.list>.project{
+			background: #f69440;
+		}
+		.list>.service{
+			background: #50bb8b;
+		}
+		.list>.college{
+			background: #90c647;
+		}
+		.list>.register{
+			position: absolute;
+			top: 1.9rem;
+			left: 2.4rem;
+			width: 1.6rem;
+			height: 1.6rem;
+			border-radius: 50%;
+			background: #fff;
+		}
+		.list>.register>a>img{
+			margin-top: 0.25rem;
+			margin-left: 0.6rem;
+		}
+		.list>.register>a>p{
+			padding-left: 0.26rem;
+			padding-top: 0.08rem;
+			color:#3bb8e7;
+			font-size: 0.24rem;
+		}
+		.foot{
+			background: #f5f5f5;
+		}
+		.foot>.guanyu{
+			padding-top: 0.15rem;
+			text-align: center;
+		}
+		.foot>.guanyu>a{
+			color:#333333;
+			font-size: 0.18rem;
+			display: inline-block;
+		}
+		.foot>.guanyu>.active{
+			color:#f11d1c;
+		}
+		.foot>.lianxi{
+			padding-top: 0.14rem;
+			text-align: center;
+		}
+		.foot>.lianxi>a{
+			color:#969696;
+			font-size: 0.14rem;
+		}
+		.foot>.lianxi>a:nth-child(2){
+			display: inline-block;
+			padding-left: 0.08rem;
+			padding-right: 0.08rem;
+			border-left: 0.01rem solid #969696;
+			border-right: 0.01rem solid #969696;
+		}
+		.foot>.copyright{
+			text-align: center;
+			padding-top: 0.1rem;
+			padding-bottom: 0.15rem;
+			font-size: 0.14rem;
+			color:#969696;
+		}
+	</style>
+</head>
+<body>
+	<div class="head clear">
+		<div class="fl">
+			<img src="img/logo.png" alt="">
+		</div>
+		<div class="fr">
+			<img src="img/phone.png" alt="">
+			<span>010-84845085</span>
+		</div>
+	</div>
+	<div class="swiper-container">
+   		<div class="swiper-wrapper">
+       	 	<div class="swiper-slide"><img src="img/big.png" alt=""style="width:100%;"></div>
+        	<div class="swiper-slide"><img src="img/big.png" alt=""style="width:100%;"></div>
+        	<div class="swiper-slide"><img src="img/big.png" alt=""style="width:100%;"></div>
+    	</div>
+    	 <!-- 如果需要分页器 -->
+    	<div class="swiper-pagination"></div>
+	</div>
+	<div class="search-box">
+		<div class="search">
+			<select id="search">
+				<option value="">找资金</option>
+				<option value="">选项目</option>
+				<option value="">盟服务</option>
+				<option value="">盟学院</option>
+			</select>
+			<input type="text" value="请输入要搜索的关键词" id="searchinp">
+			<div id="fangdajing">
+				<img src="img/fangdajing.png" alt="">
+			</div>
+		</div>
+	</div>
+	<div class="list clear">
+		<div class="capital fl">
+			<a href="">
+				<img src="img/1.png" alt="">
+				<p>找资金</p>
+			</a>
+		</div>
+		<div class="project fl">
+			<a href="Choose-Items.html">
+				<img src="img/2.png" alt="">
+				<p>选项目</p>
+			</a>
+		</div>
+		<div class="service fl">
+			<a href="">
+				<img src="img/3.png" alt="">
+				<p>盟服务</p>
+			</a>
+		</div>
+		<div class="college fl">
+			<a href="">
+				<img src="img/4.png" alt="">
+				<p>萌学院</p>
+			</a>
+		</div>
+		<div class="register">
+			<a href="">
+				<img src="img/5.png" alt="">
+				<p>登录/注册</p>
+			</a>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="guanyu">
+			<a href="" class="active">触屏版</a>
+			<a href="" style="margin-left: 0.23rem;margin-right: 0.16rem;">电脑版</a>
+			<a href="">关于我们</a>
+		</div>
+		<div class="lianxi">
+			<a href="" style="margin-right: 0.08rem">联系我们</a>
+			<a href="">建议与投诉</a>
+			<a href="" style="margin-left: 0.08rem">诚聘英才</a>
+		</div>
+		<div class="copyright">copyright © 2016 北京华夏商盟版权所有 京ICP备16041114号</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="js/swiper-3.4.2.min.js"></script>
+	<!-- dpr像素比 -->
+	<script>
+		// alert(window.devicePixelRatio);
+		(function (doc, win) {
+		        var docEle = doc.documentElement,
+		                resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+		        var recalCulate = function () {
+		            var width = docEle.clientWidth;
+		            docEle.style.fontSize = 100 * (width / 640) + 'px';
+		        };//750一般UI原稿宽度
+		
+		        recalCulate();
+		
+		        if (!doc.addEventListener) return;
+		        win.addEventListener(resizeEvent, recalCulate, false);
+		    })(document, window);
+
+	</script>
+	<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+    // direction: 'vertical',
+    loop: true,
+    autoplay : 3000,
+	speed:300,  
+	pagination : '.swiper-pagination',
+	paginationClickable :true,
+	 // 如果需要分页器
+    pagination: '.swiper-pagination',
+  })        
+  </script>
+</body>
+</html>

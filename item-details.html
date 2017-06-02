@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>item-details</title>
+	<link rel="stylesheet" href="css/base.css">
+	<style>
+		.head{
+			width: 6.4rem;
+			height: 0.61rem;
+			position: relative;
+			border-bottom: 0.01rem solid #dedede;
+		}
+		.head img:nth-child(1){
+			position: absolute;
+			top: 0.17rem;
+			left: 0.2rem;
+		}
+		.head img:nth-child(3){
+			position: absolute;
+			top: 0.14rem;
+			right: 0.28rem;
+		}
+		.head p{
+			text-align: center;
+			line-height: 0.61rem;
+			font-size: 0.24rem;
+			color:#333;
+		}
+		.item-box{
+			padding: 0.25rem 0.2rem 0.35rem 0.2rem;
+		}
+		.item-box>p:first-child{
+			font-size: 0.24rem;
+			color:#0f91dd;
+		}
+		.item-box>p:nth-child(2){
+			font-size: 0.14rem;
+		}
+		.item-box>p:nth-child(2)~p{
+			font-size: 0.16rem;
+			color:#666;
+		}
+		.item-box>p:nth-child(2)~p span{
+			color:#000;
+		}
+		.shoucang{
+			border-top:0.01rem solid #dedede; 
+			padding-top: 0.08rem;
+			padding-bottom: 0.08rem;
+			border-bottom: 0.14rem solid #f5f5f5;
+		}
+		.shoucang li{
+			width: 33.2%;
+			text-align: center;
+			height: 0.32rem;
+			line-height: 0.32rem;
+			font-size: 0.16rem;
+		}
+		.shoucang li:first-child,ul li:nth-child(2){
+			border-right:0.01rem solid #dedede;
+		}
+		.shoucang li img{
+			vertical-align: middle;
+			margin-right: 0.05rem;
+		}
+		.equity-financing{
+			padding: 0.2rem 0.2rem 0.31rem 0.2rem;
+			border-bottom: 0.14rem solid #f5f5f5;
+		}
+		.equity-financing>.title>a{
+			display: block;
+			width: 1rem;
+			height: 0.35rem;
+			background: #0f91dd;
+			font-size: 0.16rem;
+			color:#fff;
+			text-align: center;
+			line-height: 0.35rem;
+		}
+		.equity-financing>p{
+			font-size: 0.16rem;
+			height: 0.16rem;
+		}
+		.equity-financing>p>span{
+			color:#666;
+		}
+		#mylist{
+			border-top: 0.01rem solid #ededed;
+			border-bottom: 0.01rem solid #ededed;
+		}
+		#mylist li{
+			width: 33.33%;
+			height: 0.51rem;
+			font-size: 0.16rem;
+			text-align: center;
+			line-height: 0.51rem;
+		}
+		#mylist>.active{
+			color:#0f91dd;
+		}
+		#mylist>#line{
+			width: 33.33%;
+			height: 0.02rem;
+			background: #0f91dd;
+			position: absolute;
+			left: 0;
+			top: 6.47rem;
+			z-index: 100;
+		}
+		.line{
+			width: 100%;
+			height: 0.01rem;
+			background: #dedede;
+		}
+		.prospectus{
+			padding: 0.2rem 0.31rem 0.16rem 0.29rem;
+		}
+		.prospectus>p:first-child{
+			width: 5.72rem;
+			/*font-size: 0.14rem;*/
+		}
+		.prospectus>img{
+			width: 5.8rem;
+			margin-top: 0.16rem;
+			margin-bottom: 0.19rem;
+		}
+		.foot{
+			background: #f5f5f5;
+		}
+		.foot>.guanyu{
+			padding-top: 0.31rem;
+			text-align: center;
+			padding-bottom: 0.12rem;
+		}
+		.foot>.guanyu>a{
+			color:#333333;
+			font-size: 0.18rem;
+			display: inline-block;
+		}
+		.foot>.guanyu>.active{
+			color:#f11d1c;
+		}
+		.foot>p{
+			padding: 0.12rem 0.27rem 0.1rem 0.24rem;
+			background: #fff;
+			border-bottom: 0.1rem solid #f5f5f5;
+		}
+		.yuetan{
+			display: inline-block;
+			width: 2.8rem;
+			height: 0.4rem;
+			border-radius: 0.02rem;
+			background: #fc8026;
+			text-align: center;
+			line-height: 0.4rem;
+			color:#fff;
+			font-size: 0.16rem;
+			margin-left: 0.03rem;
+			margin-right: 0.07rem;
+		}
+		.contact{
+			display: inline-block;
+			width: 2.9rem;
+			height: 0.4rem;
+			border-radius: 0.02rem;
+			background: #108cde;
+			text-align: center;
+			line-height: 0.4rem;
+			color:#fff;
+			font-size: 0.16rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<img src="img/house.png" alt="">
+		<p>项目详情</p>
+		<img src="img/head.png" alt="">
+	</div>
+	<div class="item-box">
+		<p>河北省某国企控股物流公司融资</p>
+		<p>2016-11-24 11:11:15　　　　　浏览数：29人</p>
+		<p>项目类型：<span>项目融资</span> </p>
+		<p>所在地区： <span>全国</span> </p>
+		<p>资产估价：<span>30000万</span></p>
+		<p>融资阶段： </p>
+	</div>
+	<ul class="clear shoucang">
+		<li class="fl"><img src="img/xingxing.png" alt="">收藏</li>
+		<li class="fl"><img src="img/tanhao.png" alt="">举报</li>
+		<li class="fl"><img src="img/fenxiang.png" alt="">分享</li>
+	</ul>
+	<div class="equity-financing">
+		<div class="title"><a href="Money-details.html">股权融资</a></div>
+		<p style="margin-top:0.4rem;"><span>转让价格： </span>30000万</p>
+		<p style="margin-top:0.38rem;"><span>转让价格： </span>3%</p>
+		<p style="margin-top:0.33rem;"><span>截止时间：</span> 2017年1月11日</p>
+	</div>
+	<ul id="mylist" class="clear">
+		<li class="fl active">项目概述</li>
+		<li class="fl" style="border:none;">项目优势</li>
+		<li class="fl">其他备注</li>
+		<div id="line"></div>
+	</ul>
+	<div class="line"></div>
+	<div class="prospectus">
+		<p>接受利率年化9%以内，天津某优质国企担保融资，接受利率年化9%以内，天津某优质国企担
+保融资。接受利率年化9%以内，天津某优质国企担保融资，接受利率年化9%以内，天津某优
+接受利率年化9%以内，天津某优质国企担保融资，接受利率年化9%以内，天津某优质国企担
+保融资。</p>
+		<img src="img/air.png" alt="">
+		<p style="font-size: 0.14rem;">商业计划书: 浏览</p>
+	</div>
+	<div class="foot">
+		<div class="guanyu">
+			<a href="" class="active">触屏版</a>
+			<a href="" style="margin-left: 0.23rem;margin-right: 0.16rem;">电脑版</a>
+			<a href="">关于我们</a>
+		</div>
+		<p>
+			<a href="" class="yuetan">约谈项目方</a>
+			<a href="" class="contact">查看联系方式</a>
+		</p>
+	</div>
+
+	<script src="js/tween.js"></script>
+	<script>
+		var mylist = document.getElementById('mylist');
+		var lis = mylist.getElementsByTagName('li');
+		var line = document.getElementById('line');
+		var time = null;
+		var index = 0;
+		for(var i=0;i<lis.length;i++){
+			lis[i].index = i;
+			lis[i].onclick = function(){
+				index = this.index;
+				clear();
+				this.className = "fl active";
+				move(index);
+			}
+		}
+		function move(ind){
+			var t = 0;
+			var maxT = 10;
+			var start = line.offsetLeft;
+			var end =lis[0].offsetWidth * ind;
+			var change = end - start;
+			clearInterval(time);
+			time = setInterval(function(){
+				t++;
+				if(t>=maxT){
+					clearInterval(time);
+				}
+				line.style.left = Tween.Bounce.easeOut(t,start,change,maxT) + 'px';
+			},10);
+		}
+		function clear(){
+			for(var i=0;i<lis.length;i++){
+				lis[i].className = "fl";
+			}
+		}
+	</script>
+	<!-- dpr像素比 -->
+	<script>
+		// alert(window.devicePixelRatio);
+		(function (doc, win) {
+		        var docEle = doc.documentElement,
+		                resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+		        var recalCulate = function () {
+		            var width = docEle.clientWidth;
+		            docEle.style.fontSize = 100 * (width / 640) + 'px';
+		        };//750一般UI原稿宽度
+		
+		        recalCulate();
+		
+		        if (!doc.addEventListener) return;
+		        win.addEventListener(resizeEvent, recalCulate, false);
+		    })(document, window);
+
+	</script>
+</body>
+</html>

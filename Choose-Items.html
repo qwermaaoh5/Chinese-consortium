@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Choose Items</title>
+	<link rel="stylesheet" href="css/base.css">
+	<style>
+		.head{
+			width: 6.4rem;
+			height: 0.61rem;
+			position: relative;
+			border-bottom: 0.01rem solid #dedede;
+		}
+		.head img:nth-child(1){
+			position: absolute;
+			top: 0.17rem;
+			left: 0.2rem;
+		}
+		.head img:nth-child(3){
+			position: absolute;
+			top: 0.14rem;
+			right: 0.28rem;
+		}
+		.head p{
+			text-align: center;
+			line-height: 0.61rem;
+			font-size: 0.24rem;
+			color:#333;
+		}
+		#mylist{
+			/*position: relative;*/
+			width: 6.4rem;
+			height: 0.48rem;
+		}
+		#mylist li{
+			width: 33.33%;
+			font-size: 0.16rem;
+			text-align: center;
+			line-height: 0.48rem;
+		}
+		#mylist li img{
+			margin-left: 0.04rem;
+		}
+		#mylist>.active{
+			color:#0f91dd;
+		}
+		#mylist>#line{
+			width: 33.33%;
+			height: 0.02rem;
+			background: #0f91dd;
+			position: absolute;
+			left: 0;
+			top: 1.1rem;
+			z-index: 100;
+		}
+		.search-box{
+			/*height: 0.58rem;*/
+			background: #ebebeb;
+			padding: 0.11rem 0.2rem 0.13rem 0.2rem;
+		}
+		.search{
+			position: relative;
+			padding-top: 0.13rem;
+			padding-bottom: 0.09rem;
+			background: #fff;
+		}
+		.search>#inp{
+			width: 5.32rem;
+			height: 0.18rem;
+			outline: none;
+			border: none;
+			padding:0.09rem 0 0.09rem 0.14rem;
+			font-size: 0.18rem;
+			color:#aaa;
+			border-right: 0.02rem solid #ededed;
+		}
+		.search img{
+			position: absolute;
+			right: 0.14rem;
+			top: 0.17rem;
+			width: 0.28rem;
+		}
+		.item{
+			border-bottom: 0.11rem solid #ebebeb;
+		}
+		.item img{
+			width: 6.4rem;
+		}
+		.item div{
+			padding: 0.15rem 0.27rem 0.18rem 0.2rem;
+		}
+		.item div p:first-child{
+			font-size: 0.22rem;
+			font-weight: bold;
+		}
+		.item div p:nth-child(2){
+			font-size: 0.16rem;
+			color:#333;
+		}
+		.item div p:nth-child(3){
+			font-size: 0.14rem;
+			color:#666;
+		}
+		.item div p:nth-child(3) span{
+			color:#f11d1c;
+		}
+		.yuetan{
+			display: inline-block;
+			width: 2.9rem;
+			height: 0.4rem;
+			border-radius: 0.02rem;
+			background: #fc8026;
+			text-align: center;
+			line-height: 0.4rem;
+			color:#fff;
+			font-size: 0.16rem;
+			margin-left: 0.03rem;
+			margin-right: 0.07rem;
+			margin-top: 0.21rem;
+		}
+		.contact{
+			display: inline-block;
+			width: 2.9rem;
+			height: 0.4rem;
+			border-radius: 0.02rem;
+			background: #108cde;
+			text-align: center;
+			line-height: 0.4rem;
+			color:#fff;
+			font-size: 0.16rem;
+			margin-top: 0.21rem;
+		}
+		.more{
+			padding-left: 0.09rem;	
+			padding-right: 0.09rem;
+		}
+		.more div{
+			height: 0.4rem;
+			border-radius: 0.02rem;
+			text-align: center;
+			line-height: 0.4rem;
+			font-size: 0.14rem;
+			color:#666;
+		}
+		.more div img{
+			margin-left: 0.07rem;
+		}
+		.foot{
+			background: #f5f5f5;
+		}
+		.foot>.guanyu{
+			padding-top: 0.15rem;
+			text-align: center;
+		}
+		.foot>.guanyu>a{
+			color:#333333;
+			font-size: 0.18rem;
+			display: inline-block;
+		}
+		.foot>.guanyu>.active{
+			color:#f11d1c;
+		}
+		.foot>.lianxi{
+			padding-top: 0.14rem;
+			text-align: center;
+		}
+		.foot>.lianxi>a{
+			color:#969696;
+			font-size: 0.14rem;
+		}
+		.foot>.lianxi>a:nth-child(2){
+			display: inline-block;
+			padding-left: 0.08rem;
+			padding-right: 0.08rem;
+			border-left: 0.01rem solid #969696;
+			border-right: 0.01rem solid #969696;
+		}
+		.foot>.copyright{
+			text-align: center;
+			padding-top: 0.1rem;
+			padding-bottom: 0.15rem;
+			font-size: 0.11rem;
+			color:#969696;
+		}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<img src="img/house.png" alt="">
+		<p>选项目</p>
+		<img src="img/head.png" alt="">
+	</div>
+	<ul id="mylist" class="clear">
+		<li class="fl active">综合排序</li>
+		<li class="fl">更新时间</li>
+		<li class="fl">条件筛选<img src="img/loudou.png" alt=""></li>
+		<div id="line"></div>
+	</ul>
+	<div class="search-box">
+		<div class="search">
+			<input type="text" id="inp" value="在当前条件下搜索">
+			<img src="img/fangdajing.png" alt="">
+		</div>
+	</div>
+	<div class="items-box">
+		<div class="item">
+			<img src="img/s1.png" alt="">
+			<div>
+				<p>盟易融</p>
+				<p>河北省某国企控股物流公司融资</p>
+				<p>融资金额：<span>30000万</span> 所在地区：河北省 融资类型：其他融资
+				</p>
+				<p>
+					<a href="item-details.html" class="yuetan">约谈项目方</a>
+					<a href="" class="contact">查看联系方式</a>
+				</p>
+			</div>
+		</div>
+		<div class="item">
+			<img src="img/s2.png" alt="">
+			<div>
+				<p>盟易融</p>
+				<p>河北省某国企控股物流公司融资</p>
+				<p>融资金额：<span>30000万</span> 所在地区：河北省 融资类型：其他融资
+				</p>
+				<p>
+					<a href="" class="yuetan">约谈项目方</a>
+					<a href="" class="contact">查看联系方式</a>
+				</p>
+			</div>
+		</div>
+		<div class="item">
+			<img src="img/s3.png" alt="">
+			<div>
+				<p>盟易融</p>
+				<p>河北省某国企控股物流公司融资</p>
+				<p>融资金额：<span>30000万</span> 所在地区：河北省 融资类型：其他融资
+				</p>
+				<p>
+					<a href="" class="yuetan">约谈项目方</a>
+					<a href="" class="contact">查看联系方式</a>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="more">
+		<div>
+			点击查看更多<img src="img/xiasanjiao.png" alt="">
+		</div>
+	</div>
+	<div class="foot">
+		<div class="guanyu">
+			<a href="" class="active">触屏版</a>
+			<a href="" style="margin-left: 0.23rem;margin-right: 0.16rem;">电脑版</a>
+			<a href="">关于我们</a>
+		</div>
+		<div class="lianxi">
+			<a href="" style="margin-right: 0.08rem">联系我们</a>
+			<a href="">建议与投诉</a>
+			<a href="" style="margin-left: 0.08rem">诚聘英才</a>
+		</div>
+		<div class="copyright">copyright © 2016 北京华夏商盟版权所有 京ICP备16041114号</div>
+	</div>
+	<script src="js/tween.js"></script>
+	<script>
+		var mylist = document.getElementById('mylist');
+		var lis = mylist.getElementsByTagName('li');
+		var line = document.getElementById('line');
+		var time = null;
+		var index = 0;
+		for(var i=0;i<lis.length;i++){
+			lis[i].index = i;
+			lis[i].onclick = function(){
+				index = this.index;
+				clear();
+				this.className = "fl active";
+				move(index);
+			}
+		}
+		function move(ind){
+			var t = 0;
+			var maxT = 10;
+			var start = line.offsetLeft;
+			var end =lis[0].offsetWidth * ind;
+			var change = end - start;
+			clearInterval(time);
+			time = setInterval(function(){
+				t++;
+				if(t>=maxT){
+					clearInterval(time);
+				}
+				line.style.left = Tween.Bounce.easeOut(t,start,change,maxT) + 'px';
+			},10);
+		}
+		function clear(){
+			for(var i=0;i<lis.length;i++){
+				lis[i].className = "fl";
+			}
+		}
+	</script>
+
+
+
+
+
+		<!-- dpr像素比 -->
+	<script>
+		// alert(window.devicePixelRatio);
+		(function (doc, win) {
+		        var docEle = doc.documentElement,
+		                resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+		        var recalCulate = function () {
+		            var width = docEle.clientWidth;
+		            docEle.style.fontSize = 100 * (width / 640) + 'px';
+		        };//750一般UI原稿宽度
+		
+		        recalCulate();
+		
+		        if (!doc.addEventListener) return;
+		        win.addEventListener(resizeEvent, recalCulate, false);
+		    })(document, window);
+	</script>
+</body>
+</html>
